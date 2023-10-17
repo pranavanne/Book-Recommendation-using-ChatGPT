@@ -1,0 +1,229 @@
+:root {
+    --white: #ffffff;
+    --light: whitesmoke;
+    --light-grey: #e8e8e8;
+    --pink: #ff176b;
+    --medium-dark: #777;
+    --dark: #242526;
+    --border-rad-lg: 30px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #242526;
+}
+body {
+    font-family: 'Poppins';
+    background-size: cover;
+    background-repeat: repeat-y;
+    /*background-image: url('./images/moviepitchbg-dark.jpg');*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* =================
+      Typography 
+     ================= */
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+p {
+    line-height: 1.35em;
+}
+
+/* =================
+      Sections 
+     ================= */
+
+header {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    
+}
+
+header>a {
+    color: var(--light);
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 1em 0;
+    padding-bottom: 0;
+    margin-top: 5%;
+}
+
+header span {
+    font-weight: 700;
+}
+
+main {
+    padding: 0px 1em 40px;
+}
+
+section {
+    margin: 0 auto 0;
+    background-color: var(--light);
+    border-radius: 15px 50px;
+    padding: .25em 1em;
+    box-shadow: 0px 1px 18px 3px var(--dark);
+    max-width: 800px;
+}
+
+/* =================
+      Setup 
+     ================= */
+
+
+.setup-inner {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5em .5em;
+    min-height: 234px;
+}
+
+.setup-inner>img {
+    width: 40%;
+    align-self: center;
+}
+
+.setup-input-container {
+    min-height: 74px;
+}
+
+.speech-bubble-ai {
+    max-width: 55%;
+    min-height: 124px;
+    border-radius: 50px;
+    position: relative;
+    margin: 40px;
+    border: 3px solid var(--medium-dark);
+    background-color: var(--white);
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.speech-bubble-ai>p {
+    padding: 0 1.3em;
+    color: var(--dark);
+    font-size: 85%;
+}
+
+textarea {
+    background-color: var(--light-grey);
+    padding: 1em;
+    border: none;
+    border-radius: 50px 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    resize: none;
+    min-height: 40px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea::placeholder {
+    color: var(--medium-dark);
+    font-size: 88%;
+    opacity: 0.8;
+}
+
+/* larger mobiles+ */
+
+@media(min-width: 380px) {
+    .setup-input-container {
+        padding-top: 0;
+    }
+
+    .speech-bubble-ai:before {
+        top: 92px;
+    }
+
+    .speech-bubble-ai:after {
+        top: 96px;
+    }
+
+    .speech-bubble-ai>p {
+        font-size: 100%;
+    }
+
+    textarea::placeholder {
+        font-size: 100%;
+        opacity: 0.8;
+    }
+}
+
+/* =================
+      Buttons & SVG 
+     ================= */
+
+
+button {
+    border: none;
+    background: var(--pink);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--dark);
+}
+
+.send-btn {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    min-width: 50px;
+}
+
+.send-btn>img {
+    width: 1.6em;
+    vertical-align: middle;
+}
+
+.view-pitch-btn {
+    color: var(--light);
+    border-radius: var(--border-rad-lg);
+    padding: 1em;
+    margin: .4em auto;
+    display: block;
+    font-size: 1.2em;
+}
+
+.view-pitch-btn:hover {
+    box-shadow: 1px 1px 5px 1px var(--medium-dark);
+}
+
+img.loading {
+    max-width: 40px;
+    filter: none;
+}
+
+/* =================
+      Output 
+     ================= */
+
+.output-container {
+    display: none;
+    flex-direction: column;
+    margin: 1em auto;
+    color: var(--dark);
+    padding: 1em;
+}
+
+.output-img-container>img {
+    max-width: 100%;
+    border-radius: var(--border-rad-lg);
+    box-shadow: 1px 1px 5px 1px var(--dark);
+}
